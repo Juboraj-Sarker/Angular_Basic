@@ -1,0 +1,47 @@
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: wheat;
+  }
+
+.custom{
+    text-align: center;
+}
+
+ th{
+    height: 20px;
+    text-align: center;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+ }
+
+ tr.mat-header-row{
+     height: 30px;
+ }
+
+ .mat-form-field-infix {
+    display: block;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    width: 180px;
+    height: 25px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding-bottom: 10px;
+    height: 20px;
+}
+
+.mat-form-field-wrapper {
+    padding-bottom: 5px;
+}
+
+
+tr:nth-child(even){
+    background-color: #f1f1f1;
+}
+

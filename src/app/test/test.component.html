@@ -1,0 +1,77 @@
+<p>
+    Hello From TEST COMPONENT. Logged in user is: {{name}}
+</p>
+<h2>{{2+2}}</h2>
+<h2>{{ "This is test of string concatanation: " + name}}</h2>
+<h2>{{ "This is example of string length: " + name.length}}</h2>
+<h2>This is example of string to upper case:  {{ name | uppercase}}</h2>
+<h2>{{getUser()}}</h2>
+<h2>This is an example of Window Location: {{siteUrl}}</h2>
+<input [disabled] = "isDisabled" type="text" value="Hello World">
+<h2 class="text-success">Example of simple class assign</h2>
+<h2 [class]="successClass">Example of simple class assign with variable</h2>
+<h2 [class.text-danger]="hasError">This is example of setting class with logic</h2>
+<h2 [ngClass] = "messageClass">This is example of ng class object of ANGULAR with multiple condition</h2>
+<h2 [style.color] = "'orange'">This is example of style binding</h2>
+<h2 [style.color] = "hasError? 'red' : 'green' ">This is example of style binding with condition</h2>
+<h2 [style.color] = "myColor">This is example of style binding with variable</h2>
+<h2 [ngStyle] = "titleStyle">This is an example of ngStyle in Angular</h2>
+<button (click) = "myClickMethod()">Click Me</button>
+<h2>{{greetings}}</h2>
+<input #myInput type="text">
+<button (click)= "myClickMethodWithParameter(myInput.value)">Get Value from Input</button> <br>
+<input [(ngModel)] = "updateValue" type="text">
+<h2>{{updateValue}}</h2>
+<div *ngIf = "displayForNgIf; then ifBlock; else elseBlock;"></div>
+<div [ngSwitch] = "color">
+    <h2 *ngSwitchCase = "'red'">This is example of Switch Case (value select is RED)</h2>
+    <h2 *ngSwitchCase = "'green'">This is example of Switch Case (value select is GREEN)</h2>
+    <h2 *ngSwitchCase = "'blue'">This is example of Switch Case (value select is BLUE)</h2>
+    <h2 *ngSwitchDefault>This is example of Switch Case (value select is DEFAULT)</h2>
+</div>
+<div *ngFor="let color of colors; index as i">
+    <h2>{{i}} {{color}}</h2>
+</div>
+<div *ngFor="let color of colors; first as f">
+    <h2>{{f}} {{color}}</h2>
+</div>
+<div *ngFor="let color of colors; last as l">
+    <h2>{{l}} {{color}}</h2>
+</div>
+
+<div *ngFor="let color of colors; odd as o">
+    <h2>{{o}} {{color}}</h2>
+</div>
+
+<div *ngFor="let color of colors; even as e">
+    <h2>{{e}} {{color}}</h2>
+</div>
+
+<h2>{{parentData}}</h2>
+<button (click)="fireEvent()">Send Events</button>
+
+<h2>{{messagesForSubString | slice:5:55}}</h2>
+<h2>{{person | json}}</h2>
+
+<h2>{{5.678 | number: '1.2-3'}}</h2>
+<h2>{{5.678 | number: '3.4-5'}}</h2>
+<h2>{{5.678 | number: '3.1-2'}}</h2>
+<h2>{{0.25 | percent}}</h2>
+<h2>{{0.25 | currency}}</h2>
+<h2>{{0.25 | currency: 'EUR'}}</h2>
+<h2>{{date}}</h2>
+<h2>{{date | date: 'short'}}</h2>
+<h2>{{date | date: 'shortDate'}}</h2>
+<h2>{{date | date: 'shortTime'}}</h2>
+
+
+
+
+
+<ng-template #ifBlock>
+    <h2>This is example of If Block with ngif</h2>
+</ng-template>
+<ng-template #elseBlock>
+    <h2>This is example of Else Block with ngif</h2>
+</ng-template>
+

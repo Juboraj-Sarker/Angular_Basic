@@ -1,0 +1,57 @@
+<p>read-from-api works!</p>
+<!-- <ul class="list-group">
+    
+    <li *ngFor = "let post of posts" class="list-group-item">
+        {{post.id}}
+    </li>
+</ul> -->
+
+
+
+
+  <div class="mat-elevation-z8">
+
+    <div  align = "end" style="padding-right: 10px;">
+        <mat-form-field appearance="outline" style="padding: 0px;">
+            <mat-label>Search</mat-label>
+            <input  (keyup)="applyFilter($event.target.value)" matInput >
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            
+          </mat-form-field>
+      </div>
+
+<table  mat-table [dataSource]="dataSource" matSort class="myTable">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="userId" >
+      <th style="width: 5%; background-color: #EBDDE2; text-align: center;" mat-header-cell *matHeaderCellDef mat-sort-header>UserId </th>
+      <td style="background-color: #EBDDE2;" mat-cell *matCellDef="let element"> {{element.userId}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="id">
+      <th style="width: 5%; background-color: #F7E7CE; text-align: center;" mat-header-cell *matHeaderCellDef mat-sort-header>ID </th>
+      <td style="background-color: #F7E7CE;" mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="title">
+      <th style="width: 30%; background-color: #F0FFFF; text-align: center;" mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+      <td style="background-color: #F0FFFF;"mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="body">
+      <th style="width: 60%; background-color: #E3E4FA; text-align: center;"mat-header-cell *matHeaderCellDef mat-sort-header> Body </th>
+      <td style="background-color: #E3E4FA;"mat-cell *matCellDef="let element"> {{element.body}} </td>
+    </ng-container>
+  
+    <tr class="custom" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions] = "[5, 10, 20, 50]" showFirstLastButtons>
+      
+  </mat-paginator>
+
+</div>

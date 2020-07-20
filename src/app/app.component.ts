@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hello-world';
+  public testDataSend = "TEST DATA SEND FROM APP COMPONENT";
+  public message = "";
 }
